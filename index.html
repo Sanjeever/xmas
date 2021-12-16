@@ -17,11 +17,24 @@
             background-color: white;
         }
 
+        @keyframes upAndDown {
+            0% {
+                transform: translate3d(0, 0, 0);
+            }
+            50% {
+                transform: translate3d(0, 4%, 0);
+            }
+            100% {
+                transform: translate3d(0, 0%, 0);
+            }
+        }
+
         h1 {
             font-family: Helvetica, sans-serif;
             font-size: xxx-large;
             font-weight: bold;
             transition: all .3s ease-in-out;
+            animation: 2s ease-in-out upAndDown infinite;
         }
 
         h1:hover {
