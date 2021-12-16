@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎄</text></svg>"
+          type="image/x-icon"/>
+    <meta charset="UTF-8">
+    <title>Merry Christmas</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            background-color: white;
+        }
+
+        h1 {
+            font-family: Helvetica, sans-serif;
+            font-size: xxx-large;
+            font-weight: bold;
+            transition: all .3s ease-in-out;
+        }
+
+        h1:hover {
+            transform: translate3d(0px, -6px, 0px);
+        }
+
+        #headline {
+            margin-left: 70px;
+        }
+
+        #next_btn {
+            font-family: Helvetica, sans-serif;
+            font-size: medium;
+            font-weight: bold;
+            margin: 50px auto auto;
+            /*margin-right:15%;*/
+            height: 43px;
+            width: 144px;
+            float: right;
+            border: none;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+            transition: all .3s ease-in-out;
+        }
+
+        #next_btn:hover {
+            box-shadow: 0 15px 15px rgba(0, 0, 0, 0.12);
+            transform: translate3d(0px, -1px, 0px);
+        }
+
+        #footer {
+            margin-top: 200px;
+        }
+
+        a:link {
+            color: black;
+            font-size: medium;
+        }
+
+        a:visited {
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+<div id="main">
+    <div id="contentBox">
+        <h1 id="headline"></h1>
+        <button id="next_btn">Next</button>
+    </div>
+    <div id="footer">
+        <h3>Thanks : </h3>
+        <h4>Open Source Library</h4>
+        <p><a href="https://github.com/twitter/twemoji" target="_blank">twemoji</a></p>
+        <p>A simple library that provides standard Unicode emoji support across all platforms.</p>
+    </div>
+</div>
+
+
+</body>
+
+<script>
+    window.onload = function () {
+        const tree = twemoji.parse('🎄');
+        const headline = document.querySelector('#headline');
+        headline.innerHTML = tree + '<span>&nbsp;Merry Christmas</span>';
+
+        document.querySelector('#next_btn').addEventListener('click', function () {
+            window.location.href = "Christmas_Tree.html";
+        });
+    }
+</script>
+</html>
