@@ -3,6 +3,7 @@
 
 <head>
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/howler@2.2.3/dist/howler.min.js"></script>
     <link rel="shortcut icon"
           href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎄</text></svg>"
           type="image/x-icon"/>
@@ -250,6 +251,14 @@
         document.querySelector('#previous_btn').addEventListener('click', function () {
             window.location.href = "index.html";
         });
+
+        const sound = new Howl({
+            src: ['resources\\Rook1e,J\'san - Have Yourself a Merry Little Christmas (feat. j\'san).flac'],
+            html5: true,
+            autoplay: true,
+            loop: true
+        });
+        sound.play();
     }
 </script>
 
