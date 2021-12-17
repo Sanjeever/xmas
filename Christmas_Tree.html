@@ -194,7 +194,9 @@
         <div class="snow background"></div>
         <div class="snow background layered"></div>
     </div>
-    <div id="ChristmasTree" style="font-size: 13vh;">&#127876;</div>
+    <div id="ChristmasTree" style="font-size: 13vh;">
+        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@derekmooney-gh-pages/svg/1f384.svg" alt="🎄">
+    </div>
     <!--    &#127876; is '🎄'-->
     <div id="btns">
         <button id="previous_btn">Previous</button>
@@ -229,7 +231,7 @@
         if (!IsPC()) {
             document.querySelector('.switch').innerHTML = '';
             document.querySelector('.switch').remove();
-            // MainTree.innerHTML = twemoji.parse('🎄');
+            MainTree.innerHTML = '&#127876;';
             document.getElementById('ChristmasTree').style.fontSize = '20vh';
             document.getElementById('previous_btn').style.position = 'absolute';
             document.getElementById('previous_btn').style.left = '42%';
@@ -237,9 +239,11 @@
 
         switcher.addEventListener('click', function () {
             if (this.checked) {
-                MainTree.innerHTML = twemoji.parse('🎄');
-            } else {
                 MainTree.innerHTML = '&#127876;';
+                document.getElementById('ChristmasTree').style.fontSize = '28vh';
+            } else {
+                MainTree.innerHTML = '<img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@derekmooney-gh-pages/svg/1f384.svg" alt="🎄">';
+                document.getElementById('ChristmasTree').style.fontSize = '13vh';
             }
         });
 
