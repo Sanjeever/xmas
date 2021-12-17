@@ -228,7 +228,11 @@
 
         if (!IsPC()) {
             document.querySelector('.switch').innerHTML = '';
-            MainTree.innerHTML = twemoji.parse('🎄');
+            document.querySelector('.switch').remove();
+            // MainTree.innerHTML = twemoji.parse('🎄');
+            document.getElementById('ChristmasTree').style.fontSize = '20vh';
+            document.getElementById('previous_btn').style.position = 'absolute';
+            document.getElementById('previous_btn').style.left = '42%';
         }
 
         switcher.addEventListener('click', function () {
