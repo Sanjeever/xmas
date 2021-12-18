@@ -1,3 +1,4 @@
+// Playback starts as soon as Howl is generated
 const sound = new Howl({
     //use Cloud Object Storage
     src: ["https://files-1251985639.cos.ap-shanghai.myqcloud.com/Rook1e%2CJ'san%20-%20Have%20Yourself%20a%20Merry%20Little%20Christmas%20(feat.%20j'san).mp3"],
@@ -6,16 +7,7 @@ const sound = new Howl({
     loop: true
 });
 
-window.onfocus = function () {
-    sound.play();
-}
-
-window.onclose = function () {
-    sound.stop();
-}
-
 window.onload = function () {
-
     function IsPC() {
         //IsPC.js https://gist.github.com/joshle/d079f1766fa1cd2adc778d3afd63ac61
         const userAgentInfo = navigator.userAgent;
@@ -55,4 +47,8 @@ window.onload = function () {
     document.querySelector('#previous_btn').addEventListener('click', function () {
         window.location.href = "index.html";
     });
+}
+
+window.onclose = function () {
+    sound.stop();
 }
