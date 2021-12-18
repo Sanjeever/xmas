@@ -32,6 +32,9 @@ window.onload = function () {
         document.getElementById('ChristmasTree').style.fontSize = '20vh';
         document.getElementById('previous_btn').style.position = 'absolute';
         document.getElementById('previous_btn').style.left = '42%';
+        window.onblur = function () {
+            sound.stop();
+        }
     }
 
     switcher.addEventListener('click', function () {
