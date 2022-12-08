@@ -43,7 +43,8 @@ body {
 
 body {
   /* see : https://www.codespeedy.com/snowfall-effect-in-background-using-css/*/
-  background-image: url("snow1.png"), url("snow2.png"), url("snow3.png");
+  background-image: url("pic/snow1.png"), url("pic/snow2.png"),
+    url("pic/snow3.png");
   animation: snow 20s linear infinite;
 }
 @keyframes snow {
