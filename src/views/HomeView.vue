@@ -6,17 +6,28 @@
 </template>
 
 <script setup lang="ts">
-import { Howl } from "howler";
-let sound: Howl = new Howl({
-  src: [
-    "https://files-1251985639.cos.ap-shanghai.myqcloud.com/Rook1e%2CJ'san%20-%20Have%20Yourself%20a%20Merry%20Little%20Christmas%20(feat.%20j'san).mp3",
-  ],
-  html5: true,
-  autoplay: true,
-  loop: true,
-});
+import { sound } from "@/config/howler";
+
+let isFirstClick = true;
+
 onMounted(() => {
-  sound.play();
+  const isEnableAutoplay = () => {
+    const context = new AudioContext();
+    if (context.state === "running") {
+      return true;
+    }
+    return false;
+  };
+  if (isEnableAutoplay() && document.hasFocus()) {
+    sound.play();
+  } else {
+    window.addEventListener("click", () => {
+      if (isFirstClick) {
+        sound.play();
+        isFirstClick = false;
+      }
+    });
+  }
 });
 
 onBeforeUnmount(() => {
