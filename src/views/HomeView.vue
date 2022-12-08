@@ -20,7 +20,6 @@ onMounted(() => {
   } else {
     window.isFirstClick = true;
     window.addEventListener("click", () => {
-      console.log(window.isFirstClick);
       if (window.isFirstClick) {
         sound.play();
         window.isFirstClick = false;
