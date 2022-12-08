@@ -1,6 +1,6 @@
 # xmas
 
-Show a showman on browser.
+Show a snowman on browser.
 Build with Vue3 + Vite + Typescript
 
 ## Project Setup
