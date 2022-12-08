@@ -1,44 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon"
-          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎄</text></svg>"
-          type="image/x-icon"/>
-    <link rel="stylesheet" href="css/mainCSS.css" type="text/css">
+  <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎄</text></svg>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Merry Christmas</title>
-</head>
-<body>
-<div id="main">
-    <div id="contentBox">
-        <h1 id="headline"></h1>
-        <button id="next_btn">Next</button>
-    </div>
-    <div id="footer">
-        <p>Just a CSS3 animation exercise <a href="https://music.163.com/#/song?id=529823794&userid=127812141"
-                                             target="_blank">🎵</a></p>
-        <p>Wish I Could Do Better : )</p>
-        <h3>Thanks : </h3>
-        <p><a href="https://github.com/twitter/twemoji" target="_blank">twemoji</a></p>
-        <p>A simple library that provides standard Unicode emoji support across all platforms.</p>
-        <p><a href="https://github.com/goldfire/howler.js" target="_blank">howler.js</a></p>
-        <p>Javascript audio library for the modern web.</p>
-    </div>
-</div>
-
-
-</body>
-
-<script>
-    window.onload = function () {
-        const tree = twemoji.parse('🎄');
-        const headline = document.querySelector('#headline');
-        headline.innerHTML = tree + '<span>&nbsp;Merry Christmas</span>';
-
-        document.querySelector('#next_btn').addEventListener('click', function () {
-            window.location.href = "Christmas_Tree.html";
-        });
-    }
-</script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>
