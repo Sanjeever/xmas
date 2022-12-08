@@ -7,9 +7,6 @@
 
 <script setup lang="ts">
 import { sound } from "@/config/howler";
-
-let isFirstClick = true;
-
 onMounted(() => {
   const isEnableAutoplay = () => {
     const context = new AudioContext();
@@ -21,10 +18,12 @@ onMounted(() => {
   if (isEnableAutoplay() && document.hasFocus()) {
     sound.play();
   } else {
+    window.isFirstClick = true;
     window.addEventListener("click", () => {
-      if (isFirstClick) {
+      console.log(window.isFirstClick);
+      if (window.isFirstClick) {
         sound.play();
-        isFirstClick = false;
+        window.isFirstClick = false;
       }
     });
   }
