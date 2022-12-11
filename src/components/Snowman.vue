@@ -1,5 +1,5 @@
 <template>
-  <div class="container" id="snowman">
+  <div class="container">
     <div class="snowman">
       <div class="snowman-face"></div>
       <div class="snowman-nose"></div>
@@ -12,21 +12,13 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import isMobile from "is-mobile";
-let snowman: HTMLElement;
-onMounted(() => {
-  snowman = <HTMLElement>document.querySelector("#snowman");
-  snowman.style.minHeight = isMobile() ? "18vh" : "35vh";
-});
-</script>
-
 <style scoped>
 /* see : https://codepen.io/pokecoder/pen/abLLwQM */
 .container {
   display: block;
   width: auto;
   height: auto;
+  min-height: 35vmin;
 }
 
 .snowman {
