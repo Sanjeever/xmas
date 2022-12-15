@@ -24,7 +24,7 @@ h1 {
   font-size: 1.8rem;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
-  color: #f58653;
+  color: #ec7671;
   animation: 1.5s ease-in-out upAndDown infinite;
 }
 
