@@ -1,4 +1,5 @@
 <template>
+  <div class="player" />
   <div class="flex-column center v-w-h">
     <Snowman />
     <h1>🎄 Merry Christmas</h1>
@@ -6,10 +7,10 @@
 </template>
 
 <script setup lang="ts">
-import { aplayer } from "@/config/aplayer";
 import { sound } from "@/config/howler";
 import isMobile from "is-mobile";
 onMounted(() => {
+  import("@/config/aplayer");
   if (!isMobile()) {
     document.body.addEventListener("click", () => {
       sound.play();
