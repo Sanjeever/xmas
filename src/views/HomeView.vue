@@ -1,5 +1,6 @@
 <template>
   <div class="player" />
+  <div class="player" />
   <div class="flex-column center v-w-h">
     <Snowman />
     <h1>🎄 Merry Christmas</h1>
