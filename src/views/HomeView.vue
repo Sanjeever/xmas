@@ -1,35 +1,28 @@
 <template>
+  <div class="player" />
   <div class="flex-column center v-w-h">
     <Snowman />
     <h1>🎄 Merry Christmas</h1>
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
+import "APlayer/dist/APlayer.min.css";
+import APlayer from "APlayer";
+import { audioList } from "@/config/aplayer-options-audio";
 import { sound } from "@/config/howler";
-onMounted(() => {
-  const isEnableAutoplay = () => {
-    const context = new AudioContext();
-    if (context.state === "running") {
-      return true;
-    }
-    return false;
-  };
-  if (isEnableAutoplay() && document.hasFocus()) {
-    sound.play();
-  } else {
-    window.isFirstClick = true;
-    window.addEventListener("click", () => {
-      if (window.isFirstClick) {
-        sound.play();
-        window.isFirstClick = false;
-      }
-    });
-  }
-});
 
-onBeforeUnmount(() => {
-  sound.stop();
+onMounted(() => {
+  const ap = new APlayer({
+    container: document.querySelector(".player"),
+    fixed: true,
+    autoplay: true,
+    audio: audioList,
+    volume: 1.0,
+  });
+  document.body.addEventListener("click", () => {
+    sound.play();
+  });
 });
 </script>
 
