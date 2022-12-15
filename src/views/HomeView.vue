@@ -1,6 +1,4 @@
 <template>
-  <div class="player" />
-  <div class="player" />
   <div class="flex-column center v-w-h">
     <Snowman />
     <h1>🎄 Merry Christmas</h1>
@@ -8,18 +6,10 @@
 </template>
 
 <script setup>
-import APlayer from "APlayer";
-import { audioList } from "@/config/aplayer-options-audio";
+import { aplayer } from "@/config/aplayer";
 import { sound } from "@/config/howler";
 
 onMounted(() => {
-  const ap = new APlayer({
-    container: document.querySelector(".player"),
-    fixed: true,
-    autoplay: true,
-    audio: audioList,
-    volume: 1.0,
-  });
   document.body.addEventListener("click", () => {
     sound.play();
   });
