@@ -8,7 +8,6 @@
 </template>
 
 <script setup>
-import "aplayer/dist/APlayer.min.css";
 import APlayer from "APlayer";
 import { audioList } from "@/config/aplayer-options-audio";
 import { sound } from "@/config/howler";
