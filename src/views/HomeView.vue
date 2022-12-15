@@ -5,7 +5,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { aplayer } from "@/config/aplayer";
 import { sound } from "@/config/howler";
 import isMobile from "is-mobile";
