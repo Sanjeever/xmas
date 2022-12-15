@@ -1,4 +1,4 @@
-import APlayer from "APlayer";
+import APlayer from "aplayer";
 import { audioList } from "@/config/aplayer-options-audio";
 
 export const aplayer = new APlayer({
