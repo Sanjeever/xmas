@@ -8,11 +8,13 @@
 <script setup>
 import { aplayer } from "@/config/aplayer";
 import { sound } from "@/config/howler";
-
+import isMobile from "is-mobile";
 onMounted(() => {
-  document.body.addEventListener("click", () => {
-    sound.play();
-  });
+  if (!isMobile()) {
+    document.body.addEventListener("click", () => {
+      sound.play();
+    });
+  }
 });
 </script>
 
