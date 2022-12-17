@@ -27,6 +27,7 @@ h1 {
   transition: all 0.3s ease-in-out;
   color: #ec7671;
   animation: 1.5s ease-in-out upAndDown infinite;
+  user-select: none;
 }
 
 @keyframes upAndDown {
