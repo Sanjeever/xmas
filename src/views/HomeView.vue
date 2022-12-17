@@ -2,14 +2,17 @@
   <div class="player" />
   <div class="flex-column center v-w-h">
     <Snowman />
-    <h1>🎄 Merry Christmas</h1>
+    <h1 ref="titleDOM">🎄 Merry Christmas</h1>
   </div>
 </template>
 
 <script setup lang="ts">
 import { sound } from "@/config/howler";
 import isMobile from "is-mobile";
+import twemoji from "twemoji";
+const titleDOM = $ref<HTMLElement | null>(null);
 onMounted(() => {
+  twemoji.parse(<HTMLElement>titleDOM);
   import("@/config/aplayer");
   if (!isMobile()) {
     document.body.addEventListener("click", () => {

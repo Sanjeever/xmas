@@ -41,6 +41,14 @@ body {
   align-items: center;
 }
 
+.emoji {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
 body {
   /* see : https://www.codespeedy.com/snowfall-effect-in-background-using-css/*/
   background-image: url("pic/snow1.png"), url("pic/snow2.png"),
