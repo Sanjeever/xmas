@@ -2,7 +2,9 @@
   <div class="player" />
   <div class="flex-column center v-w-h">
     <Snowman />
-    <h1 ref="titleDOM">🎄 Merry Christmas</h1>
+    <h1 ref="titleDOM" :style="h1FontSizeStyleObject" @click="increaseFontSize">
+      🎄 Merry Christmas
+    </h1>
   </div>
 </template>
 
@@ -11,6 +13,19 @@ import { sound } from "@/config/howler";
 import isMobile from "is-mobile";
 import twemoji from "twemoji";
 const titleDOM = $ref<HTMLElement | null>(null);
+const DEFAULT_FONT_SIZE = 1.8;
+let fontSize = $ref(DEFAULT_FONT_SIZE);
+const h1FontSizeStyleObject = computed(() => {
+  return { fontSize: `${fontSize}rem` };
+});
+
+function increaseFontSize() {
+  if (fontSize > 2.5) {
+    fontSize = 1.8;
+  }
+  fontSize += 0.1;
+}
+
 onMounted(() => {
   twemoji.parse(<HTMLElement>titleDOM);
   import("@/config/aplayer");
@@ -25,7 +40,6 @@ onMounted(() => {
 <style scoped>
 h1 {
   font-family: Helvetica, sans-serif;
-  font-size: 1.8rem;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
   color: #ec7671;
