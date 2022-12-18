@@ -2,9 +2,11 @@
   <div class="player" />
   <div class="flex-column center v-w-h">
     <Snowman />
-    <h1 ref="titleDOM" :style="h1FontSizeStyleObject" @click="increaseFontSize">
-      🎄 Merry Christmas
-    </h1>
+    <h1
+      ref="titleDOM"
+      :style="h1FontSizeStyleObject"
+      @click="increaseFontSize"
+    />
   </div>
 </template>
 
@@ -28,7 +30,8 @@ function increaseFontSize() {
 }
 
 onMounted(() => {
-  twemoji.parse(<HTMLElement>titleDOM);
+  titleDOM!.textContent = "🎄 Merry Christmas";
+  twemoji.parse(titleDOM!);
   import("@/config/aplayer");
   if (!isMobile()) {
     document.body.addEventListener("click", () => {
