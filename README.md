@@ -26,3 +26,4 @@ pnpm build
 - [howler.js](https://github.com/goldfire/howler.js)
 - [APlayer](https://github.com/DIYgod/APlayer)
 - [is-mobile](https://github.com/juliangruber/is-mobile)
+- [twemoji](https://github.com/twitter/twemoji)
