@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   transition: all 0.5s;
-  /* box-sizing: border-box; */
 }
 
 a {
@@ -42,6 +41,8 @@ body {
 }
 
 .emoji {
+  /* this class use by twemoji icon */
+  /* see : https://github.com/elunez/eladmin-web/blob/master/src/components/SvgIcon/index.vue#L52 */
   width: 1em;
   height: 1em;
   vertical-align: -0.15em;
@@ -50,7 +51,7 @@ body {
 }
 
 body {
-  /* see : https://www.codespeedy.com/snowfall-effect-in-background-using-css/*/
+  /* see : https://www.codespeedy.com/snowfall-effect-in-background-using-css */
   background-image: url("pic/snow1.png"), url("pic/snow2.png"),
     url("pic/snow3.png");
   animation: snow 20s linear infinite;
