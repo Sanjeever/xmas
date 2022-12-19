@@ -111,9 +111,7 @@ $expression: "🎅", "🤶", "🎄", "🔔", "🦌", "🛷", "🧦", "🍎", "�
       2500 +
       1500}ms
       infinite
-      #{random() *
-      4000 /
-      -1000}s
+      #{calc(random() * 4000 / -1000)}s
       cubic-bezier(0.46, 0.53, 0.51, 0.62);
     opacity: 0;
     cursor: pointer;
