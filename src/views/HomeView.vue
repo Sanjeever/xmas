@@ -7,6 +7,7 @@
       :style="h1FontSizeStyleObject"
       @click="increaseFontSize"
     />
+    <LikeButton />
   </div>
 </template>
 
