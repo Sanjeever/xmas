@@ -15,11 +15,14 @@
 import { sound } from "@/config/howler";
 import isMobile from "is-mobile";
 import twemoji from "twemoji";
+import type { CSSProperties } from "vue";
 const titleDOM = $ref<HTMLElement>();
 const DEFAULT_FONT_SIZE = 1.8;
 const MAX_FONT_SIZE = 2.5;
 let fontSize = $ref(DEFAULT_FONT_SIZE);
-const h1FontSizeStyleObject = computed(() => ({ fontSize: `${fontSize}rem` }));
+const h1FontSizeStyleObject = computed<CSSProperties>(() => ({
+  fontSize: `${fontSize}rem`,
+}));
 
 function increaseFontSize() {
   if (fontSize > MAX_FONT_SIZE) {
