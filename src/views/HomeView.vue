@@ -1,6 +1,6 @@
 <template>
   <div class="player" />
-  <div class="flex-column center v-w-h">
+  <div flex-column center vwh>
     <Snowman />
     <h1
       ref="titleDOM"
