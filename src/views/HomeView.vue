@@ -2,11 +2,7 @@
   <div class="player" />
   <div flex-column center vwh>
     <Snowman />
-    <h1
-      ref="titleDOM"
-      :style="h1FontSizeStyleObject"
-      @click="increaseFontSize"
-    />
+    <h1 ref="titleDOM" @click="increaseFontSize" />
     <LikeButton />
   </div>
 </template>
@@ -15,20 +11,16 @@
 import { sound } from "@/config/howler";
 import isMobile from "is-mobile";
 import twemoji from "twemoji";
-import type { CSSProperties } from "vue";
 const titleDOM = $ref<HTMLElement>();
 const DEFAULT_FONT_SIZE = 1.8;
 const MAX_FONT_SIZE = 2.5;
 let fontSize = $ref(DEFAULT_FONT_SIZE);
-const h1FontSizeStyleObject = computed<CSSProperties>(() => ({
-  fontSize: `${fontSize}rem`,
-}));
 
 function increaseFontSize() {
   if (fontSize > MAX_FONT_SIZE) {
     fontSize = DEFAULT_FONT_SIZE;
   }
-  fontSize += 0.1;
+  fontSize = parseFloat((fontSize + 0.1).toFixed(1));
 }
 
 onMounted(() => {
@@ -51,6 +43,7 @@ h1 {
   color: #ec7671;
   animation: 1.5s ease-in-out upAndDown infinite;
   user-select: none;
+  font-size: v-bind(fontSize + "rem");
 }
 
 @keyframes upAndDown {
