@@ -1,67 +1,38 @@
-* {
-  margin: 0;
-  padding: 0;
-  transition: all 0.5s;
-}
-
-a {
-  text-decoration: none;
-}
-
 html,
 body {
   background: #2c3e50;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
     sans-serif;
-}
-
-*[flex-row] {
-  display: flex;
-  flex-direction: row;
-}
-
-*[flex-column] {
-  display: flex;
-  flex-direction: column;
-}
-
-*[vwh] {
-  width: 100vw;
-  height: 100vh;
-}
-
-*[wh] {
-  width: 100%;
-  height: 100%;
-}
-
-*[center] {
-  justify-content: center;
-  align-items: center;
-}
-
-.emoji {
-  /* this class use by twemoji icon */
-  /* see : https://github.com/elunez/eladmin-web/blob/master/src/components/SvgIcon/index.vue#L52 */
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.15em;
-  fill: currentColor;
-  overflow: hidden;
 }
 
 body {
   /* see : https://www.codespeedy.com/snowfall-effect-in-background-using-css */
-  background-image: url("pic/snow1.png"), url("pic/snow2.png"),
-    url("pic/snow3.png");
+  background-image: url('pic/snow1.png'), url('pic/snow2.png'),
+    url('pic/snow3.png');
   animation: snow 20s linear infinite;
 }
 @keyframes snow {
   0% {
-    background-position: 0px 0px, 0px 0px, 0px 0px;
+    background-position:
+      0px 0px,
+      0px 0px,
+      0px 0px;
   }
   100% {
-    background-position: 500px 1000px, 400px 400px, 300px 300px;
+    background-position:
+      500px 1000px,
+      400px 400px,
+      300px 300px;
   }
 }

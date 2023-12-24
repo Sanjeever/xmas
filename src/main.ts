@@ -1,16 +1,10 @@
-import { createApp } from "vue";
+import { createApp } from 'vue'
+import App from './App'
+import 'virtual:uno.css'
+import '@unocss/reset/tailwind-compat.css'
+import 'APlayer/dist/APlayer.min.css';
+import './assets/main.css'
+import './assets/dot-loader.css'
 
-import App from "./App.vue";
-import router from "./router";
-
-import "./assets/main.css";
-import "./assets/dot-loader.css";
-import "aplayer/dist/APlayer.min.css";
-
-const app = createApp(App);
-
-app.use(router);
-
-setTimeout(() => {
-  app.mount("#app");
-}, 1500);
+const app = createApp(App)
+app.mount('#app')

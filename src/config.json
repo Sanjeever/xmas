@@ -1,0 +1,6 @@
+{
+  "twinkling": true,
+  "bulb": {
+    "colors": ["#f4d348", "#37799e", "#bb3e39", "#e388b1"]
+  }
+}

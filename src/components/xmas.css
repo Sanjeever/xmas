@@ -1,0 +1,59 @@
+/* 设置圣诞树和树的样式 */
+.xmas,
+.tree {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* 设置树的位置为相对定位 */
+.tree {
+  position: relative;
+}
+
+/* 设置装饰盒子的样式 */
+.bulb {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border-radius: 50%;
+  left: calc(var(--x) * 8px);
+  top: calc(var(--y) * 8px);
+}
+
+/* 设置树干的样式 */
+.trunk {
+  width: 50px;
+  height: 70px;
+  background-color: #9e6328;
+  border-radius: 0 0 20px 20px;
+}
+
+/* 设置树叶的样式 */
+.trees {
+  height: 50px;
+  border-radius: 50px;
+}
+
+/* 设置树叶和树干的阴影 */
+.tree div,
+.trunk {
+  box-shadow: 10px 10px 22px #1c4d1c;
+}
+
+/* 设置不同类型的树叶颜色 */
+.tree div:nth-child(4n + 1) {
+  background: #2d6359;
+}
+
+.tree div:nth-child(4n + 2) {
+  background: #32776a;
+}
+
+.tree div:nth-child(4n + 3) {
+  background: #268b4c;
+}
+
+.tree div:nth-child(4n + 4) {
+  background: #459763;
+}
