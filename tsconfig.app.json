@@ -9,6 +9,7 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "jsxImportSource": "vue"
-  },
+    "jsxImportSource": "vue",
+    "allowJs": true
+  }
 }
