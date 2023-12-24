@@ -16,9 +16,4 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
   },
-  build: {
-    rollupOptions: {
-      external: ['APlayer/dist/APlayer.min.css'],
-    },
-  },
 })
